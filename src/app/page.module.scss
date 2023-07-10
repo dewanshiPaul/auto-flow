@@ -1,0 +1,117 @@
+.bg_image {
+    background: url(background.jpg) no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    height: 100%;
+    filter: blur(20px);
+}
+
+.main {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 2vh;
+    display: grid;
+    grid-template-columns: 60% auto;
+    gap: 2vw;
+}
+
+.diagram {
+    background-color: rgba(118, 114, 114, 0.3);
+    border-radius: 10px;
+    padding: 2vh;
+}
+
+.diagram_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5vh;
+}
+
+.diagram_drawing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(236, 229, 229, 0.3);
+    border-radius: 10px;
+
+    &:hover,
+    &:active {
+        cursor: zoom-in;
+
+        .magnify {
+            opacity: 1;
+        }
+    }
+}
+
+.magnify {
+    width: 15vh;
+    height: 15vh;
+    box-shadow: 0 5px 10px -2px rgba(0,0,0,0.3);
+    pointer-events: none;
+    position: absolute;
+    opacity: 0;
+    border: 4px solid whitesmoke;
+    z-index: 99;
+    border-radius: 100%;
+    display: block;
+    transition: opacity .2s;
+}
+
+.input_container {
+    position: fixed;
+    bottom: 4vh;
+    width: 58%;
+}
+
+.chat_container {
+    background-color: rgba(118, 114, 114, 0.3);
+    border-radius: 10px;
+    padding: 2vh;
+
+    &_header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1.5vh;
+        border-bottom: 2px solid rgba(255,255,255,0.3);
+        padding-bottom: 1vh;
+        border-radius: 5px;
+    }
+
+    &_body {
+        max-height: 80vh;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
+
+.loader {
+    position: absolute;
+}
+
+#mermaid_content {
+    overflow-y: scroll;
+    max-height: 80vh;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.signin {
+    left: 0px;
+    position: fixed;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+}

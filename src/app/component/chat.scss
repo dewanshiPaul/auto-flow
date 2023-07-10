@@ -1,0 +1,19 @@
+.chat_box {
+    background-color: rgba(255,255,255,0.3);
+    padding-right: 2vh;
+    padding-top: 1vh;
+    padding-left: 1vh;
+    padding-bottom: 1vh;
+    color: white;
+    border-radius: 10px;
+    position: relative;
+}
+
+.state {
+    border-radius: 50%;
+    height: 5px;
+    width: 5px;
+    position: absolute;
+    right: 0.5vh;
+    bottom: 1.5vh;
+}

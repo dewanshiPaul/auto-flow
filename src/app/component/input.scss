@@ -1,0 +1,22 @@
+.input {
+    border-radius: 10px;
+    background: #40414F;
+    padding: 2vh;
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    #promptText {
+        border: none;
+        background: transparent;
+        width: 100%;
+        max-height: 200px;
+        overflow-y: hidden;
+        resize: none;
+        color: white;
+        caret: white block;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
